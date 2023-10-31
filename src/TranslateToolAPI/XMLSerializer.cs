@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 namespace TranslateToolAPI
 {
-    internal class XMLSerializer : ISerializable
+    public sealed class XMLSerializer : ISerializable
     {
         public T Deserialize<T>(string path)
         {
