@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace TranslateToolAPI
 {
-    public sealed class JsonSerializer : ISerializable
+    public sealed class JsonSerializer : ISerializer
     {
         public T Deserialize<T>(string path)
         {

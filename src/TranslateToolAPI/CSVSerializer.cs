@@ -11,7 +11,7 @@ using System.IO;
 
 namespace TranslateToolAPI
 {
-    internal class CSVSerializer : ISerializable
+    internal class CSVSerializer : ISerializer
     {
         public T Deserialize<T>(string path)
         {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TranslateToolAPI
 {
-    public interface ISerializable
+    public interface ISerializer
     {
         void Serialize<T>(string path, T _obj);
         void Serialize<T>(FileStream file, T _obj);
