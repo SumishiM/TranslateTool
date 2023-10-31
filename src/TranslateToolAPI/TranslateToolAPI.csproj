@@ -70,7 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ISerialier.cs" />
     <Compile Include="CSVSerializer.cs" />
     <Compile Include="JsonSerializer.cs" />
     <Compile Include="XMLSerializer.cs" />

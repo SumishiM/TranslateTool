@@ -16,7 +16,4 @@ namespace TranslateToolAPI
         T Deserialize<T>(FileStream file);
 
     }
-    public class Class1
-    {
-    }
 }
