@@ -19,7 +19,6 @@ namespace TranslateToolAPI
             CsvReader Csv = new CsvReader(reader,CultureInfo.InvariantCulture);
             
            return Csv.GetRecord<T>();
-            
         }
         
         public T Deserialize<T>(FileStream file)
