@@ -70,15 +70,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ISerialier.cs" />
-    <Compile Include="CSVSerializer.cs" />
-    <Compile Include="JsonSerializer.cs" />
-    <Compile Include="XMLSerializer.cs" />
+    <Compile Include="Serializers\ISerialier.cs" />
+    <Compile Include="Serializers\CSVSerializer.cs" />
+    <Compile Include="Serializers\JsonSerializer.cs" />
+    <Compile Include="Serializers\XMLSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
