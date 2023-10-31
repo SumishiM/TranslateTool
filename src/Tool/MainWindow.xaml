@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tool"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="TranslateTool.exe" Height="450" Width="800">
     <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="22" Stroke="Black" VerticalAlignment="Top" Width="800"/>
+
+        <Button Content="Edit" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Top" Height="22" Width="35"/>
+        <Label Content="DATA GRID VIEW" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Height="27" Width="102"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="193,54,193,175" SelectionChanged="DataGrid_SelectionChanged"/>
+        <ToolBarTray HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="59" Margin="1,1,0,0">
+            <ToolBar Name="File"  HorizontalAlignment="Left" Height="22" VerticalAlignment="Center" Width="53">
+                <Button Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Content="New" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Content="Save As" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+            </ToolBar>
+        </ToolBarTray>
+        <Label Content="File" HorizontalAlignment="Left" Margin="10,-2,0,0" VerticalAlignment="Top" Height="23" Width="33"/>
+
+
 
     </Grid>
 </Window>
