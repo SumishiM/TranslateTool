@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="CSVSerializer.cs" />
     <Compile Include="JsonSerializer.cs" />
     <Compile Include="XMLSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
