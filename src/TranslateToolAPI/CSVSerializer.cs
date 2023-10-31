@@ -24,6 +24,15 @@ namespace TranslateToolAPI
 
         public void Serialize<T>(string path, T _obj)
         {
+            StreamWriter writer = new StreamWriter(path);
+            CsvWriter(writer, CultureInfo.InvariantCulture);
+
+
+
+            Csv.WriteRecords(T);
+
+
+
 
             throw new NotImplementedException();
         }
