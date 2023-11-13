@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TranslateToolAPI;
 
 namespace Tool
 {
@@ -20,19 +22,32 @@ namespace Tool
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ObservableCollection<TranslateItem> items;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            items = new ObservableCollection<TranslateItem>();
+
+            foreach (var item in TranslateToolAPI.Application.translateItems)
+            {
+                items.Add(item);
+            }
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        void AddColumn(string newColumnName)
         {
 
-        }
-
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            this.TranslationGrid.Columns.Add(new DataGridTextColumn
+            {
+                // bind to a dictionary property
+                Binding = new Binding("Custom[" + newColumnName + "]"),
+                Header = newColumnName,
+                DisplayIndex = TranslationGrid.Columns.Count - 1,
+                
+            });
+            this.TranslationGrid.Columns[1].DisplayIndex = TranslationGrid.Columns.Count;
         }
     }
 }
