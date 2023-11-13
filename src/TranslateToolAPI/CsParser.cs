@@ -26,8 +26,10 @@ namespace TranslateToolAPI
 
             for (int i = 0; i < Application.translateItems.Count; i ++)
             {
-                
-      
+                _writer.WriteLine("Id.Add(" + Application.translateItems.ElementAt(i).Id +")");
+                //_writer.WriteLine();
+
+
             }
 
             _writer.WriteLine("}");
@@ -39,8 +41,10 @@ namespace TranslateToolAPI
 
 internal partial class Generated_CS
 {
-        public uint Id { get; set; }
-        public Dictionary<string, string> Translations { get; set; }
+        public List<uint> Id { get; set; }
+    public Dictionary<string, string> Translations { get; set; }
+    
+   
 
     Generated_CS() 
     {
