@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TranslateToolAPI
 {
-    internal class TranslateItem
+    public class TranslateItem
     {
-        public Guid Id { get; set; }
+        public uint Id { get; set; }
         public Dictionary<string, string> Translations { get; set; }
     }
 }
