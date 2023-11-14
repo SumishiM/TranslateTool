@@ -1,51 +1,31 @@
 ﻿<Window x:Class="Tool.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tool"
+        mc:Ignorable="d"
         Title="TranslateTool.exe" Height="450" Width="800">
-
+    
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="50"/>
-        </Grid.RowDefinitions>
+        <Rectangle HorizontalAlignment="Center" Height="22" Stroke="Black" VerticalAlignment="Top" Width="800"/>
 
-        <StackPanel Orientation="Horizontal">
+        <Button Content="Edit" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Top" Height="22" Width="35"/>
+        <Label Content="DATA GRID VIEW" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Height="27" Width="102"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="193,54,193,175" />
+        <ToolBarTray HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="59" Margin="1,1,0,0">
+            <ToolBar Name="File"  HorizontalAlignment="Left" Height="22" VerticalAlignment="Center" Width="53">
+                <Button Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Content="New" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Content="Save As" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-            <Label Content="File" HorizontalAlignment="Left" Margin="10,-2,0,0" VerticalAlignment="Top" Height="23" Width="33"/>
-            <ToolBarTray HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="59" Margin="1,1,0,0" >
-                <ToolBar Name="File"  HorizontalAlignment="Left" Height="22" VerticalAlignment="Center" Width="53">
-                    <Button Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <Button Content="New" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <Button Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <Button Content="Save As" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <Button Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            </ToolBar>
+        </ToolBarTray>
+        <Label Content="File" HorizontalAlignment="Left" Margin="10,-2,0,0" VerticalAlignment="Top" Height="23" Width="33"/>
 
-                </ToolBar>
-            </ToolBarTray>
-        
-            <Button Content="Edit" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Top" Height="22" Width="35"/>
-        </StackPanel>
 
-        <DataGrid x:Name="TranslationGrid"
-                  Grid.Row="1" Margin="0,20,0,0" 
-                  HeadersVisibility="All" Background="Aqua"
-                  RowHeight="25" 
-                  AutoGenerateColumns="True" 
-                  CanUserAddRows="True" 
-                  CanUserReorderColumns="True"
-                  CanUserResizeColumns="True"
-                  CanUserResizeRows="False" >
-            
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Width="50"/>
-                <DataGridTextColumn Header="Commentaire" Width="*" MinWidth="50" DisplayIndex="1"/>
-            </DataGrid.Columns>
-
-        </DataGrid>
-
-        <Button Grid.Row="2" Margin="685,5, 5, 5" Content="Ajouter une langue" HorizontalContentAlignment="Center"></Button>
 
     </Grid>
 </Window>

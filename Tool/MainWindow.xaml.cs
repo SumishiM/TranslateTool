@@ -1,8 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using TranslateToolAPI;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace Tool
 {
@@ -11,18 +20,9 @@ namespace Tool
     /// </summary>
     public partial class MainWindow : Window
     {
-        public IList<TranslateItem> items;
-
         public MainWindow()
         {
             InitializeComponent();
-
-            items = new List<TranslateItem>();
-
-            foreach (var item in TranslateToolAPI.Application.translateItems)
-            {
-                items.Add(item);
-            }
         }
     }
 }
