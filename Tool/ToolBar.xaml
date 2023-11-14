@@ -6,7 +6,19 @@
              xmlns:local="clr-namespace:Tool"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_New" Click="mnuNew_Click"/>
+                <MenuItem Header="_Open" Click="mnuOpen_Click"/>
+                <MenuItem Header="_Save" Click="mnuSave_Click"/>
+                <MenuItem Header="_Save As" Click="mnuSaveAs_Click"/>
+                <Separator />
+                <MenuItem Header="_Exit" Click="mnuExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+            </MenuItem>
+        </Menu>
+        <TextBox AcceptsReturn="True" />
+    </DockPanel>
 </UserControl>
